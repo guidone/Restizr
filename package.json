@@ -2,7 +2,7 @@
   "name": "restizr",
   "version": "0.5",
   "description": "A simple REST mapper for Sequelize",
-  "homepage": "http://github.com/jshint/node-jshint",
+  "homepage": "http://github.com/guidone/Restizr",
   "author": {
     "name": "Guido Bellomo",
     "email": "guido.bellomo@gmail.com",
@@ -12,6 +12,10 @@
     "type": "MIT",
     "url": "http://www.opensource.org/licenses/mit-license.php"
   }],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/guidone/Restizr.git"
+  },
   "main": "index.js",
   "dependencies": {
     "sequelize": ">= 1.3.5"
