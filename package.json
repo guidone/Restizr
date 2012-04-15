@@ -1,6 +1,6 @@
 {
   "name": "restizr",
-  "version": "0.5",
+  "version": "0.5.0",
   "description": "A simple REST mapper for Sequelize",
   "homepage": "http://github.com/guidone/Restizr",
   "author": {
