@@ -17,16 +17,18 @@ For example, given the model
 		}
 	});```
 
-With these simple commands:
+These simple commands:
 ```var Restizr = require('restizr');
 var rest = new Restizr(app);  // ExpressJS app
 rest.map(User);```
 
-Will create the following endpoints:
-POST /api/user
-GET /api/user/<id>
-DELETE /api/user/<id>
-PUT /api/user/<id>
+will create the following REST endpoints:
+- POST /api/user
+- GET /api/user/<id>
+- DELETE /api/user/<id>
+- PUT /api/user/<id>
+
+Where *id* is the primary key in the MySQL  table.
 
 ## Options
 
