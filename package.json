@@ -1,6 +1,6 @@
 {
   "name": "restizr",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "A simple REST mapper for Sequelize",
   "homepage": "http://github.com/guidone/Restizr",
   "author": {
@@ -18,6 +18,7 @@
   },
   "main": "index.js",
   "dependencies": {
-    "sequelize": ">= 1.3.5"
+    "sequelize": ">= 1.3.5",
+    "sugar": "1.2.5"
   }
 }
