@@ -23,7 +23,15 @@ var rest = new Restizr(app);  // ExpressJS app
 rest.map(User);```
 
 will create the following REST endpoints:
-- GET /api/user: list first 10 records of the table "user". Accepts parameter limit and offset (for example /api/user?limit=20&offset=10)
+- **GET /api/user**: list first 10 records of the table "user". Accepts parameters: 
+		- limit: the number of records to retrieve
+		- offset: zero based index of the starting record
+		- sort: field used for sorting
+		- direction: could be 'asc' or 'desc'
+		- filter: field used for filtering
+	-	query: query used to filter
+Example: /api/user?limit=20&offset=10
+To override this values, just insert a onBefore middleware and add or modify keys to the object request.queryString
 - GET /api/user/<id>: get the record with primary key <id> from the table "user"
 - POST /api/user: create a new entry in the table "user", returns the primary key of the new record
 - DELETE /api/user/<id>: delete the record with primary key <id> from the table "user"

@@ -1,3 +1,5 @@
+var extend = require( 'node.extend' );
+
 var engines = {
 		sequelize: {
 			// serialize an object
@@ -195,9 +197,9 @@ var engines = {
 				var that = this;
 				 
 				return function(req,res,next) {
-					var result = {error: false};
+					var result = {error: false,success: true};
 					// build the result
-					result[model.name.toLowerCase()] = that.serialize(req.record,model);
+					result[model.name.toLowerCase()] = [that.serialize(req.record,model)];
 					// put on stack
 					req.response = result;
 					return next();
@@ -316,7 +318,7 @@ module.exports = function(app) {
 				onAfterDelete: null,
 				onResponse: null			
 				};
-			var options = default_options.extend(opts);
+			var options = extend(default_options,opts);
 
 			var engine = engines[options.engine];						
 			var restUrl = options.basepath+'/'+model.name.toLowerCase();
