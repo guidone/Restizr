@@ -1,5 +1,4 @@
-var extend = require( 'node.extend' );
-
+var sugar = require('sugar');
 var engines = {
 		sequelize: {
 			// serialize an object
@@ -318,8 +317,8 @@ module.exports = function(app) {
 				onAfterDelete: null,
 				onResponse: null			
 				};
-			var options = extend(default_options,opts);
 
+			var options = Object.merge(default_options,opts);
 			var engine = engines[options.engine];						
 			var restUrl = options.basepath+'/'+model.name.toLowerCase();
 			
